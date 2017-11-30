@@ -61,6 +61,7 @@ let counter = 0;
             complete[1].classList.remove('flipped-card-p');
             checkNumber = [];
             complete = [];
+            gameboard.
           }, 1500)
         }
       };
