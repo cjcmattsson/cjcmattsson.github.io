@@ -9,6 +9,16 @@
 </head>
 <body>
 
+<button class="start" type="button" name="button">Start Game</button>
+<div class="timer-message">
+  <div class="sentence">
+    <p>You'll get 60 seconds</p>
+  </div>
+  <div class="clock">60</div>
+</div>
+<button class="restart" type="button" name="button">Restart!</button>
+
+  <div class="wrapper">
   <div class="gameboard">
       <div class="card one" data-number="1"> <p>1</p> </div>
       <div class="card two" data-number="2"> <p>2</p> </div>
@@ -26,12 +36,12 @@
       <div class="card four" data-number="4"> <p>4</p> </div>
       <div class="card seven" data-number="7"> <p>7</p> </div>
       <div class="card eight" data-number="8"> <p>8</p> </div>
-
   </div>
+</div>
 
-  <button class="restart" type="button" name="button">Restart!</button>
 
   <script type="text/javascript" src="scripts/flip.js"></script>
+  <script type="text/javascript" src="scripts/timer.js"></script>
 
 </body>
 </html>

@@ -2,6 +2,9 @@
 
 body {
   background-color: white;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,4 +102,17 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 
 .complete {
   background-color: green;
+}
+
+/*TIMER*/
+
+.timer-message{
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.timer-message {
+  font-family: 'Rubik', monospace;
+  font-size:
 }

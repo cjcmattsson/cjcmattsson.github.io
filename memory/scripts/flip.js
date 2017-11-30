@@ -25,7 +25,7 @@ cardsArray.forEach( (card) => {
 
 checkNumber = [];
 complete = [];
-let counter = 0;
+let correct = 0;
 
   cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
@@ -42,11 +42,11 @@ let counter = 0;
           console.log(complete);
           checkNumber = [];
           console.log(checkNumber);
-          counter++;
-          console.log(counter);
+          correct++;
+          console.log(correct);
 
             // WHEN YOU'VE COMPLETED GAME
-            if (counter === 8) {
+            if (correct === 8) {
             setTimeout(function() {
               alert('GREAT SUCCES!')
               }, 1000)
@@ -68,9 +68,11 @@ let counter = 0;
     });
   })
 
+
   // RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
 
   const restart = document.querySelector('.restart');
+
 
   cardsArray.forEach((card) => {
     restart.addEventListener('click', () => {
@@ -80,7 +82,8 @@ let counter = 0;
 
       complete = [];
       checkNumber = [];
-      counter = 0;
+      correct = 0;
+
       setTimeout(() => {
         for (var i = gameboard.children.length; i >= 0; i--) {
           gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
@@ -90,7 +93,43 @@ let counter = 0;
       })
   });
 
+
+
+
+  // TIMER
+  const start = document.querySelector('.start');
+  const clock = document.querySelector('.clock');
+
+
+  start.addEventListener('click', countDown);
+
+    let count = 61;
+    function countDown () {
+      count--;
+      setTimeout ( "countDown()", 1000 );
+      clock.innerHTML = count;
+      // console.log(count);
+
+
+    }
+
+
+    // RESTART COUNTER AND GAME
+
     restart.addEventListener('click', () => {
+
+        // STOP PREVIOUS COUNTER
+        function stopCount () {
+          clearTimeout(count);
+        }
+        function countDown() { };
+        stopCount();
+
+        // RESTART TIMER
+        count = 61;
+        countDown();
+
+        // RESHUFFEL BOARD
         gameboard.classList.add('shake');
         setTimeout(() => {
 
