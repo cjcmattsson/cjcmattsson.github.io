@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.gameboard {
+  border: 0.5px solid black;
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row {
+  height: 23%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*CLOSED CARDS*/
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100px;
+  width: 120px;
+  transition: all 1s ease;
+}
+
+.card p {
+  pointer-events: none;
+  color: white;
+  opacity: 0;
+  transition-delay: 0.5s;
+  font-family: 'Rubik', monospace;
+  font-size: 30px;
+  transform: rotateY(180deg);
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+/*OPEN CARDS*/
+
+.flipped-card{
+  transform: rotateY(180deg);
+  background-color: hotpink;
+}
+
+.flipped-card-p p{
+  opacity: 1;
+}
+
+/*COMPLETE CARDS*/
+
+.complete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100px;
+  width: 120px;
+  transition: all 1s ease;
+  background-color: green;
+}
