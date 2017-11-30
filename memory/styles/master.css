@@ -30,9 +30,15 @@ body {
   height: 130px;
   width: 130px;
   transition: all 0.5s ease;
-  -webkit-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card:hover {
+  -webkit-box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 }
 
 .shake {
@@ -53,7 +59,7 @@ body {
     70% { transform: translate(3px, 1px) rotate(-1deg); }
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
 .card p {
@@ -73,6 +79,15 @@ body {
 .flipped-card{
   transform: rotateY(180deg);
   background-color: hotpink;
+  -webkit-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.flipped-card:hover {
+  -webkit-box-shadow: -2px 2px 5px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 2px 5px -1px rgba(0,0,0,0.75);
+  box-shadow: -2px 2px 5px -1px rgba(0,0,0,0.75);
 }
 
 
@@ -84,10 +99,4 @@ body {
 
 .complete {
   background-color: green;
-}
-
-/*FLIP GAMEBOARD*/
-
-.gameboard-flipped {
-  transform: rotate(360deg);
 }
