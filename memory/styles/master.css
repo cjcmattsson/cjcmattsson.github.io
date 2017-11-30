@@ -3,6 +3,7 @@
 body {
   background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,22 +11,13 @@ body {
 }
 
 .gameboard {
-  border: 0.5px solid black;
-  width: 60%;
+  width: 70%;
   height: 90vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
-}
-
-.row {
-  height: 23%;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  transition: all 1s ease;
 }
 
 /*CLOSED CARDS*/
@@ -35,9 +27,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 100px;
-  width: 120px;
-  transition: all 1s ease;
+  border-radius: 10%;
+  height: 130px;
+  width: 180px;
+  transition: all 0.5s ease;
 }
 
 .card p {
@@ -46,10 +39,10 @@ body {
   opacity: 0;
   transition-delay: 0.5s;
   font-family: 'Rubik', monospace;
-  font-size: 30px;
+  font-size: 45px;
   transform: rotateY(180deg);
   transition: all 0.5s ease;
-  transition-delay: 0.5s;
+  transition-delay: 0.2s;
 }
 
 /*OPEN CARDS*/
@@ -66,12 +59,11 @@ body {
 /*COMPLETE CARDS*/
 
 .complete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  height: 100px;
-  width: 120px;
-  transition: all 1s ease;
   background-color: green;
+}
+
+/*FLIP GAMEBOARD*/
+
+.gameboard-flipped {
+  transform: rotate(360deg);
 }

@@ -1,5 +1,11 @@
 // FLIPPING CARDS
 
+const gameboard = document.querySelector('.gameboard');
+
+for (var i = gameboard.children.length; i >= 0; i--) {
+       gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
+     }
+
 const cards = document.querySelectorAll('.card');
 
 const cardsArray = Array.from(cards);
@@ -19,6 +25,7 @@ cardsArray.forEach( (card) => {
 
 checkNumber = [];
 complete = [];
+let counter = 0;
 
   cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
@@ -35,17 +42,26 @@ complete = [];
           console.log(complete);
           checkNumber = [];
           console.log(checkNumber);
+          counter++;
+          console.log(counter);
+
+            // WHEN YOU'VE COMPLETED GAME
+            if (counter === 8) {
+            setTimeout(function() {
+              alert('GREAT SUCCES!')
+              }, 1000)
+            }
 
         } else {
           setTimeout(function() {
             console.log('hej');
-            complete[1].classList.remove('flipped-card')
-            complete[0].classList.remove('flipped-card-p')
-            complete[0].classList.remove('flipped-card')
-            complete[1].classList.remove('flipped-card-p')
+            complete[0].classList.remove('flipped-card');
+            complete[0].classList.remove('flipped-card-p');
+            complete[1].classList.remove('flipped-card');
+            complete[1].classList.remove('flipped-card-p');
             checkNumber = [];
             complete = [];
-          }, 2000)
+          }, 1500)
         }
       };
     });
@@ -62,10 +78,17 @@ complete = [];
       card.classList.remove('complete');
       complete = [];
       checkNumber = [];
-    });
+      counter = 0;
+      setTimeout(() => {
+        for (var i = gameboard.children.length; i >= 0; i--) {
+          gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
+        }
+      }, 500);
 
+      })
   });
 
-  // WHEN YOU'VE COMPLETED GAME
+    restart.addEventListener('click', () => {
+        gameboard.classList.toggle('gameboard-flipped');
 
-  
+    })
