@@ -21,7 +21,7 @@ cardsArray.forEach( (card) => {
 })
 
 
-// PUT DATANUMBER IN ARRAY, CHECK IF SAME number
+// PUT DATANUMBER IN ARRAY, CHECK IF SAME NUMBER
 
 checkNumber = [];
 complete = [];
@@ -61,7 +61,7 @@ let counter = 0;
             complete[1].classList.remove('flipped-card-p');
             checkNumber = [];
             complete = [];
-            gameboard.
+
           }, 1500)
         }
       };
@@ -77,6 +77,7 @@ let counter = 0;
       card.classList.remove('flipped-card');
       card.classList.remove('flipped-card-p');
       card.classList.remove('complete');
+
       complete = [];
       checkNumber = [];
       counter = 0;
@@ -90,6 +91,10 @@ let counter = 0;
   });
 
     restart.addEventListener('click', () => {
-        gameboard.classList.toggle('gameboard-flipped');
+        gameboard.classList.add('shake');
+        setTimeout(() => {
+
+          gameboard.classList.remove('shake');
+        }, 1000)
 
     })
