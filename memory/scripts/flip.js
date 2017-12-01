@@ -98,30 +98,53 @@ let correct = 0;
 
   // TIMER
   const start = document.querySelector('.start');
+  const abort = document.querySelector('.abort');
   const clock = document.querySelector('.clock');
+  const sentence = document.querySelector('.sentence-text');
 
 
   start.addEventListener('click', countDown);
-
     let count = 61;
+    var myVar = setInterval(function(){ countDown() }, 1000);
+
     function countDown () {
       count--;
-      setTimeout ( "countDown()", 1000 );
       clock.innerHTML = count;
+        if (count === 50) {
+        sentence.innerHTML = 'Clock is ticking!';
+      } else if (count === 40) {
+        sentence.innerHTML = 'Get a move on!!';
+      } else if (count === 30) {
+        sentence.innerHTML = 'Wow, you really are slow';
+      } else if (count === 20) {
+        sentence.innerHTML = 'Time is running out!';
+      } else if (count === 10) {
+        sentence.innerHTML = 'Your gonna lose this';
+      } else if (count === 0) {
+        sentence.innerHTML = 'Time is up';
+        clearInterval(myVar);
+      }
       // console.log(count);
+    };
 
+abort.addEventListener('click', ()=> {
+  clearInterval(myVar);
+  clock.innerHTML = '60';
+  let count = 61;
+})
 
-    }
 
 
     // RESTART COUNTER AND GAME
 
+    function stopCount () {
+      clearTimeout(count);
+    }
+
     restart.addEventListener('click', () => {
 
         // STOP PREVIOUS COUNTER
-        function stopCount () {
-          clearTimeout(count);
-        }
+
         function countDown() { };
         stopCount();
 
