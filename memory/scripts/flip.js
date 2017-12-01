@@ -102,7 +102,7 @@ let correct = 0;
   const clock = document.querySelector('.clock');
   const sentence = document.querySelector('.sentence-text');
 
-  let myTimerObj = (function(document){
+  let myTimerObj = (function(){
 
    let myTimer;
 
@@ -142,7 +142,7 @@ let correct = 0;
    }
 
    return {start:start, end:end};
- })(document);
+ })();
 
  start.addEventListener('click', myTimerObj.start);
  abort.addEventListener('click', myTimerObj.end);
