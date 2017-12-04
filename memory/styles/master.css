@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
+html, body {
+  margin: 0;
+}
+
 body {
   background-color: white;
+}
+
+p {
+  margin: 0;
 }
 
 .wrapper {
@@ -10,11 +18,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   margin: 0;
 }
 
 .gameboard {
-  width: 70%;
+  width: 600px;
   height: 90vh;
   display: flex;
   flex-wrap:wrap;
@@ -33,6 +42,7 @@ body {
   height: 130px;
   width: 130px;
   transition: all 0.5s ease;
+  border-radius: 10%;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -69,7 +79,7 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
   pointer-events: none;
   color: white;
   opacity: 0;
-  transition-delay: 0.5s;
+  transition-delay: 0.1s;
   font-family: 'Rubik', monospace;
   font-size: 45px;
   transform: rotateY(180deg);
@@ -77,10 +87,20 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
   transition-delay: 0.2s;
 }
 
+.card img {
+  height: 130px;
+  width: 130px;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+
 /*OPEN CARDS*/
 
 .flipped-card{
-  transform: rotateY(180deg);
+  pointer-events: none;
+  transform: rotateY(180deg) scale(1.07);
   background-color: hotpink;
   -webkit-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -98,21 +118,15 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
   opacity: 1;
 }
 
+.flipped-card-p img {
+  opacity: 1;
+  border-radius: 10%;
+}
+
+
 /*COMPLETE CARDS*/
 
 .complete {
-  background-color: green;
-}
-
-/*TIMER*/
-
-.timer-message{
-  height: auto;
-  width: 10%;
-  border: 1px solid black;
-}
-
-.timer-message {
-  font-family: 'Rubik', monospace;
-  font-size: 25px;
+  background-color: rgb(129, 179, 86);
+  pointer-events: none;
 }

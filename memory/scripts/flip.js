@@ -10,16 +10,6 @@ const cards = document.querySelectorAll('.card');
 
 const cardsArray = Array.from(cards);
 
-cardsArray.forEach( (card) => {
-
-  card.addEventListener('click', (event) => {
-    card.classList.toggle('flipped-card');
-    card.classList.toggle('flipped-card-p');
-
-    console.log(event.target.dataset.number);
-  });
-})
-
 
 // PUT DATANUMBER IN ARRAY, CHECK IF SAME NUMBER
 
@@ -29,6 +19,9 @@ let correct = 0;
 
   cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
+      card.classList.toggle('flipped-card');
+      card.classList.toggle('flipped-card-p');
+      console.log(event.target.dataset.number);
       checkNumber.push(event.target.dataset.number);
       complete.push(card);
       console.log(complete);
