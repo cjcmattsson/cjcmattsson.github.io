@@ -62,7 +62,7 @@ let correct = 0;
             checkNumber = [];
             complete = [];
 
-          }, 1500)
+          }, 1000)
         }
       };
     });
@@ -80,6 +80,13 @@ let correct = 0;
       card.classList.remove('flipped-card-p');
       card.classList.remove('complete');
 
+      // RESHUFFEL BOARD
+      gameboard.classList.add('shake');
+      setTimeout(() => {
+
+        gameboard.classList.remove('shake');
+      }, 1000)
+
       complete = [];
       checkNumber = [];
       correct = 0;
@@ -92,121 +99,3 @@ let correct = 0;
 
       })
   });
-
-
-
-
-  // TIMER
-  const start = document.querySelector('.start');
-  const abort = document.querySelector('.abort');
-  const clock = document.querySelector('.clock');
-  const sentence = document.querySelector('.sentence-text');
-
-  let myTimerObj = (function(){
-
-   let myTimer;
-
-   function start() {
-     myTimer = setInterval(myClock, 1000);
-     let c = 60;
-
-     if (c === 58) {
-     sentence.innerHTML = 'Clock is ticking!';
-   } else if (c === 40) {
-     sentence.innerHTML = 'Get a move on!!';
-   } else if (c === 30) {
-     sentence.innerHTML = 'Wow, you really are slow';
-   } else if (c === 20) {
-     sentence.innerHTML = 'Time is running out!';
-   } else if (c === 10) {
-     sentence.innerHTML = 'Your gonna lose this';
-   } else if (c === 0) {
-     sentence.innerHTML = 'Time is up';
-     clearInterval(myVar);
-   }
-
-
-
-     function myClock() {
-       const clock = document.querySelector('.clock').innerHTML = --c;
-       if (c == 0) {
-         clearInterval(myTimer);
-         alert("Reached zero");
-       }
-     }
-   }
-
-   function end() {
-       clearInterval(myTimer);
-       clock.innerHTML = '60';
-   }
-
-   return {start:start, end:end};
- })();
-
- start.addEventListener('click', myTimerObj.start);
- abort.addEventListener('click', myTimerObj.end);
-
-//     let count = 61;
-//     var myVar = setInterval(function(){ countDown() }, 1000);
-//
-//     function countDown () {
-//       count--;
-//       clock.innerHTML = count;
-      //   if (count === 50) {
-      //   sentence.innerHTML = 'Clock is ticking!';
-      // } else if (count === 40) {
-      //   sentence.innerHTML = 'Get a move on!!';
-      // } else if (count === 30) {
-      //   sentence.innerHTML = 'Wow, you really are slow';
-      // } else if (count === 20) {
-      //   sentence.innerHTML = 'Time is running out!';
-      // } else if (count === 10) {
-      //   sentence.innerHTML = 'Your gonna lose this';
-      // } else if (count === 0) {
-      //   sentence.innerHTML = 'Time is up';
-      //   clearInterval(myVar);
-      // }
-//       // console.log(count);
-//     };
-//
-//   clearInterval(myVar);
-//   clock.innerHTML = '60';
-//   let count = 61;
-// })
-
-
-
-    // RESTART COUNTER AND GAME
-
-    function stopCount () {
-      clearTimeout(count);
-    }
-
-    restart.addEventListener('click', () => {
-
-        // STOP PREVIOUS COUNTER
-
-        function countDown() { };
-        stopCount();
-
-        // RESTART TIMER
-        count = 64;
-        countDown();
-        if (count === 64) {
-        sentence.innerHTML = '3';
-      } else if (count === 63) {
-        sentence.innerHTML = '2';
-      } else if (count === 62) {
-        sentence.innerHTML = '1';
-      }
-
-
-        // RESHUFFEL BOARD
-        gameboard.classList.add('shake');
-        setTimeout(() => {
-
-          gameboard.classList.remove('shake');
-        }, 1000)
-
-    })
