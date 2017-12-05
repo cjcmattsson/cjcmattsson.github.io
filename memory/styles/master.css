@@ -5,7 +5,8 @@ html, body {
 }
 
 body {
-  background-color: white;
+  background-image: url("../starwars.webp");
+  background-size: cover;
 }
 
 p {
@@ -38,7 +39,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: salmon;
+  background-image: url("../deathstart.jpg");
+  background-size: contain;
   height: 130px;
   width: 130px;
   transition: all 0.5s ease;
@@ -114,11 +116,11 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 }
 
 
-.flipped-card-p p{
+.flipped-card p{
   opacity: 1;
 }
 
-.flipped-card-p img {
+.flipped-card img {
   opacity: 1;
   border-radius: 10%;
 }
@@ -135,7 +137,6 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 }
 
 .complete {
-  background-color: rgb(129, 179, 86);
   pointer-events: none;
 }
 
