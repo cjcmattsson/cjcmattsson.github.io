@@ -3,6 +3,7 @@
 const gameboard = document.querySelector('.gameboard');
 const cards = document.querySelectorAll('.card');
 const restart = document.querySelector('.restart');
+const success = document.querySelector('.success');
 const cardsArray = Array.from(cards);
 
 for (var i = gameboard.children.length; i >= 0; i--) {
@@ -69,7 +70,8 @@ cardsArray.forEach((card) => {
       // WHEN YOU'VE COMPLETED GAME
       if (correct === 8) {
         setTimeout(function() {
-          alert('GREAT SUCCES!')
+          // alert('GREAT SUCCES!')
+          success.style.display = "block";
           // cardSuccesBox.style.display = "block";
           // const cardSuccesBox = document.querySelector('.cardSucces');
         }, 1000)
@@ -78,26 +80,34 @@ cardsArray.forEach((card) => {
     });
 
 
-
-
-
-
   // RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
   restart.addEventListener('click', () => {
     card.classList.remove('flipped-card');
     card.classList.remove('flipped-card-p');
     card.classList.remove('complete');
+    timesUp.classList.remove('show');
+    newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
+
+    console.log("hej");
 
     // RESHUFFEL BOARD
-    gameboard.classList.add('shake');
     setTimeout(() => {
+      gameboard.classList.add('shake');
+      setTimeout(() => {
 
-      gameboard.classList.remove('shake');
+        gameboard.classList.remove('shake');
+      }, 1000)
+
     }, 1000)
 
     complete = [];
     checkNumber = [];
     correct = 0;
+    counter = 10;
+
+
+
+
 
     setTimeout(() => {
       for (var i = gameboard.children.length; i >= 0; i--) {

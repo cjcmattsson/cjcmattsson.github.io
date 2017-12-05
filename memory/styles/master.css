@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
 html, body {
+  font-family: 'SF Distant Galaxy Outline';
   margin: 0;
 }
 
+button {
+  font-family: 'SF Distant Galaxy Outline';
+  background-color: black;
+  color: yellow;
+  outline: none;
+}
+
 body {
-  background-image: url("../starwars.webp");
+  background-image: url("../tatooine.jpg");
   background-size: cover;
 }
 
@@ -142,4 +150,48 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 
 .pointer-stop {
   pointer-events: none;
+}
+
+/*Success & Time-is-up*/
+.success {
+  display: block;
+  position: absolute;
+  left:50%;
+  margin-left:-140px;
+  top: 35%;
+  height: 20%;
+  width: 280px;
+  background-color: salmon;
+  z-index: 10;
+  transition: all 1s ease;
+}
+
+.time-is-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left:50%;
+  margin-left:-140px;
+  top: -25%;
+  height: 20%;
+  width: 280px;
+  z-index: 10;
+  transition: all 1s ease;
+}
+
+.time-is-up h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.time-is-up h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.show {
+  top: 35%;
 }
