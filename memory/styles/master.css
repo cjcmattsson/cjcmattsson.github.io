@@ -126,7 +126,19 @@ box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.75);
 
 /*COMPLETE CARDS*/
 
+.sucess {
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  position: absolute;
+}
+
 .complete {
   background-color: rgb(129, 179, 86);
+  pointer-events: none;
+}
+
+.pointer-stop {
   pointer-events: none;
 }
