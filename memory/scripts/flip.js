@@ -27,7 +27,12 @@ function noClick() {
       gameboard.classList.remove('pointer-stop');
     }, 1000)
   };
+
+  if (timesUp.classList.contains('show')) {
+    gameboard.classList.add('pointer-stop');
+  }
 };
+
 
 function checkCombo() {
   if (checkNumber.length === 2) {
@@ -80,10 +85,22 @@ cardsArray.forEach((card) => {
         // const cardSuccesBox = document.querySelector('.cardSucces');
       }, 1000)
     };
-
+   clickCount();
+   if (counter < 0) {
+     card.removeEventListener('click', function(){});
+   }
   });
 });
 
+// MUSIC
+
+function playAudio(target) {
+  target.play();
+}
+function stopAudio(target) {
+  target.pause();
+  target.currentTime = 0;
+}
 
 // RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
 cardsArray.forEach((card) => {
@@ -99,12 +116,8 @@ cardsArray.forEach((card) => {
     start.classList.add('show');
 
 
-    function stopAudio() {
-      imperial.pause();
-      imperial.currentTime = 0;
-    }
 
-    stopAudio();
+    stopAudio(imperial);
 
 
 
