@@ -1,5 +1,9 @@
 // VARIABLES
 
+window.addEventListener('load', () => {
+  gameboard.classList.add('pointer-stop');
+})
+
 const gameboard = document.querySelector('.gameboard');
 const cards = document.querySelectorAll('.card');
 const restart = document.querySelector('.restart');
@@ -19,7 +23,7 @@ let correct = 0;
 function noClick() {
   if (checkNumber.length === 2) {
     gameboard.classList.add('pointer-stop');
-    setTimeout(function(){
+    setTimeout(function() {
       gameboard.classList.remove('pointer-stop');
     }, 1000)
   };
@@ -51,7 +55,7 @@ function checkCombo() {
 
       }, 1000)
     };
-};
+  };
 };
 
 
@@ -64,31 +68,45 @@ cardsArray.forEach((card) => {
     complete.push(card);
     console.log(complete);
 
-      checkCombo();
-      noClick();
+    checkCombo();
+    noClick();
 
-      // WHEN YOU'VE COMPLETED GAME
-      if (correct === 8) {
-        setTimeout(function() {
-          // alert('GREAT SUCCES!')
-          success.style.display = "block";
-          // cardSuccesBox.style.display = "block";
-          // const cardSuccesBox = document.querySelector('.cardSucces');
-        }, 1000)
-      };
+    // WHEN YOU'VE COMPLETED GAME
+    if (correct === 8) {
+      setTimeout(function() {
+        // alert('GREAT SUCCES!')
+        success.style.display = "block";
+        // cardSuccesBox.style.display = "block";
+        // const cardSuccesBox = document.querySelector('.cardSucces');
+      }, 1000)
+    };
 
-    });
+  });
+});
 
 
-  // RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
+// RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
+cardsArray.forEach((card) => {
   restart.addEventListener('click', () => {
     card.classList.remove('flipped-card');
-    card.classList.remove('flipped-card-p');
     card.classList.remove('complete');
     timesUp.classList.remove('show');
-    newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
 
-    console.log("hej");
+    clearInterval(id);
+    counter = 10;
+    newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
+    start.classList.remove('remove');
+    start.classList.add('show');
+
+
+    function stopAudio() {
+      imperial.pause();
+      imperial.currentTime = 0;
+    }
+
+    stopAudio();
+
+
 
     // RESHUFFEL BOARD
     setTimeout(() => {
@@ -105,15 +123,12 @@ cardsArray.forEach((card) => {
     correct = 0;
     counter = 10;
 
-
-
-
-
     setTimeout(() => {
       for (var i = gameboard.children.length; i >= 0; i--) {
         gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
       }
     }, 500);
 
-  })
-})
+  });
+
+});
