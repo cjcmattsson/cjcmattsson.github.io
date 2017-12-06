@@ -32,7 +32,6 @@ start.addEventListener('click', () => {
       if(counter < 0) {
         clickCounter.push(clicks);
         console.log(clickCounter);
-        clicks = 0;
         console.log(clicks);
 
 

@@ -108,7 +108,8 @@ cardsArray.forEach((card) => {
     card.classList.remove('flipped-card');
     card.classList.remove('complete');
     timesUp.classList.remove('show');
-
+    clicks = 0;
+    document.querySelector(".clicks").innerHTML = `Number of clicks: 0`;
     clearInterval(id);
     counter = 10;
     newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
