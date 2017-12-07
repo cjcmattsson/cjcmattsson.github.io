@@ -63,6 +63,15 @@ function checkCombo() {
   };
 };
 
+// MUSIC
+
+function playAudio(target) {
+  target.play();
+}
+function stopAudio(target) {
+  target.pause();
+  target.currentTime = 0;
+}
 
 cardsArray.forEach((card) => {
   card.addEventListener('click', (event) => {
@@ -79,6 +88,8 @@ cardsArray.forEach((card) => {
     // WHEN YOU'VE COMPLETED GAME
     if (correct === 8) {
       gameboard.classList.add('pointer-stop');
+      stopAudio(cantina);
+      playAudio(ending);
       clearInterval(id);
       setTimeout(function() {
         success.classList.add('show');
@@ -90,16 +101,6 @@ cardsArray.forEach((card) => {
    }
   });
 });
-
-// MUSIC
-
-function playAudio(target) {
-  target.play();
-}
-function stopAudio(target) {
-  target.pause();
-  target.currentTime = 0;
-}
 
 // RESTARTING GAME BY REMOVING FLIPPED CLASSES FROM ALL THAT CONTAINS THEM
 cardsArray.forEach((card) => {
@@ -144,6 +145,7 @@ cardsArray.forEach((card) => {
 
 cardsArray.forEach((card) => {
   success.addEventListener('click', () => {
+    stopAudio(ending);
     card.classList.remove('flipped-card');
     card.classList.remove('complete');
     success.classList.remove('show');

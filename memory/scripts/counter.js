@@ -8,6 +8,7 @@ const stop = document.querySelector('.stop');
 const timesUp = document.querySelector('.time-is-up');
 const imperial = document.querySelector('.imperial');
 const cantina = document.querySelector('.cantina');
+const ending = document.querySelector('.ending');
 clickCounter = [];
 
 let clicks = 0;
