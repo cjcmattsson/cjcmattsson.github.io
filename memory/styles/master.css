@@ -155,21 +155,8 @@ cursor: pointer;
 }
 
 /*Success & Time-is-up*/
-.success {
-  display: block;
-  position: absolute;
-  left:50%;
-  margin-left:-140px;
-  top: 35%;
-  height: 20%;
-  width: 280px;
-  background-color: salmon;
-  z-index: 10;
-  transition: all 1s ease;
-}
 
-
-.time-is-up, .start {
+.time-is-up, .start, .success {
   cursor: pointer;
   display: flex;
   flex-direction: column;

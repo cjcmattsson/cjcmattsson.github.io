@@ -1,4 +1,4 @@
-let counter = 5;
+let counter = 100;
 const countDown = document.querySelector('.count-down');
 const newElement = document.createElement("p");
 const secondElement = document.createElement("p");
@@ -29,6 +29,9 @@ start.addEventListener('click', () => {
   gameboard.classList.remove('pointer-stop');
   id = setInterval(function() {
       counter--;
+      if (true) {
+
+      }
       if(counter < 0) {
         clickCounter.push(clicks);
         console.log(clickCounter);

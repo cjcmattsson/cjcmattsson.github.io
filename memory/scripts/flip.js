@@ -78,11 +78,10 @@ cardsArray.forEach((card) => {
 
     // WHEN YOU'VE COMPLETED GAME
     if (correct === 8) {
+      gameboard.classList.add('pointer-stop');
+      clearInterval(id);
       setTimeout(function() {
-        // alert('GREAT SUCCES!')
-        success.style.display = "block";
-        // cardSuccesBox.style.display = "block";
-        // const cardSuccesBox = document.querySelector('.cardSucces');
+        success.classList.add('show');
       }, 1000)
     };
    clickCount();
@@ -116,11 +115,47 @@ cardsArray.forEach((card) => {
     start.classList.remove('remove');
     start.classList.add('show');
 
-
-
     stopAudio(imperial);
 
+    // RESHUFFEL BOARD
+    setTimeout(() => {
+      gameboard.classList.add('shake');
+      setTimeout(() => {
 
+        gameboard.classList.remove('shake');
+      }, 1000)
+
+    }, 1000)
+
+    complete = [];
+    checkNumber = [];
+    correct = 0;
+    counter = 10;
+
+    setTimeout(() => {
+      for (var i = gameboard.children.length; i >= 0; i--) {
+        gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
+      }
+    }, 500);
+
+  });
+
+});
+
+cardsArray.forEach((card) => {
+  success.addEventListener('click', () => {
+    card.classList.remove('flipped-card');
+    card.classList.remove('complete');
+    success.classList.remove('show');
+    clicks = 0;
+    document.querySelector(".clicks").innerHTML = `Number of clicks: 0`;
+    clearInterval(id);
+    counter = 10;
+    newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
+    setTimeout(() => {
+      start.classList.remove('remove');
+      start.classList.add('show');
+    }, 3000)
 
     // RESHUFFEL BOARD
     setTimeout(() => {
