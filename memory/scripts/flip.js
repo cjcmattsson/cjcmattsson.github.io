@@ -2,17 +2,25 @@
 
 window.addEventListener('load', () => {
   gameboard.classList.add('pointer-stop');
+  setTimeout(() => {
+    playAudio(intro);
+  }, 2100)
 })
 
 const gameboard = document.querySelector('.gameboard');
 const cards = document.querySelectorAll('.card');
 const restart = document.querySelector('.restart');
 const success = document.querySelector('.success');
+const starwarsintro = document.querySelector('.star-wars-intro');
 const cardsArray = Array.from(cards);
 
 for (var i = gameboard.children.length; i >= 0; i--) {
   gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
 }
+
+setTimeout(() => {
+  starwarsintro.classList.add('star-wars-intro-gone')
+}, 1000)
 
 // FUNCTIONS
 // PUT DATANUMBER IN ARRAY, CHECK IF SAME NUMBER

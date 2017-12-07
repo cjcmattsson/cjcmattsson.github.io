@@ -1,4 +1,4 @@
-let counter = 100;
+let counter = 3;
 const countDown = document.querySelector('.count-down');
 const newElement = document.createElement("p");
 const secondElement = document.createElement("p");
@@ -9,6 +9,7 @@ const timesUp = document.querySelector('.time-is-up');
 const imperial = document.querySelector('.imperial');
 const cantina = document.querySelector('.cantina');
 const ending = document.querySelector('.ending');
+const intro = document.querySelector('.intro');
 clickCounter = [];
 
 let clicks = 0;
@@ -26,6 +27,7 @@ countDown.appendChild(newElement);
 var id;
 start.addEventListener('click', () => {
   playAudio(cantina);
+  stopAudio(intro);
   start.classList.add('remove');
   gameboard.classList.remove('pointer-stop');
   id = setInterval(function() {
