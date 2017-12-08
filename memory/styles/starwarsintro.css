@@ -7,13 +7,14 @@ Description: A simple CSS library for creating a Star Wars Intro Crawl. May the 
 Version: 1.0
 */
 
+@font-face {font-family:"STARWARS";src:url("STARWARS.eot?") format("eot"),url("STARWARS.woff") format("woff"),url("STARWARS.ttf") format("truetype"),url("STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;}
 
 .star-wars-intro {
   width: 100%;
   height: 100%;
   font-family: "Droid Sans", arial, verdana, sans-serif;
   font-weight: 700;
-  color: #EBD71C;
+  color: #FEE63D;
   background-color: #000;
   overflow: hidden;
   position: absolute;

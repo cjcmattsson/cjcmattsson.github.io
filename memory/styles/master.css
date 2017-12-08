@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@font-face {font-family:"STARWARS";src:url("STARWARS.eot?") format("eot"),url("STARWARS.woff") format("woff"),url("STARWARS.ttf") format("truetype"),url("STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;}
+
+
+
 
 html, body {
-  font-family: 'SF Distant Galaxy Outline';
-  color: yellow;
+  font-family: 'STARWARS';
+  color: #FEE63D;
   margin: 0;
 }
 
 button {
-  font-family: 'SF Distant Galaxy Outline';
+  font-family: 'STARWARS';
   background-color: black;
-  color: yellow;
+  font-weight: 100;
+  color: #FEE63D;
   outline: none;
+}
+
+.count-down {
+  font-size: 30px;
+  width: auto;
 }
 
 body {
@@ -194,7 +204,9 @@ cursor: pointer;
 .buttons-and-timer {
   margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .show {

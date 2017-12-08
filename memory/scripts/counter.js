@@ -1,4 +1,4 @@
-let counter = 3;
+let counter = 45;
 const countDown = document.querySelector('.count-down');
 const newElement = document.createElement("p");
 const secondElement = document.createElement("p");

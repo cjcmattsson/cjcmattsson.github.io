@@ -14,13 +14,15 @@ const success = document.querySelector('.success');
 const starwarsintro = document.querySelector('.star-wars-intro');
 const cardsArray = Array.from(cards);
 
+console.log(cardsArray);
+
 for (var i = gameboard.children.length; i >= 0; i--) {
   gameboard.appendChild(gameboard.children[Math.random() * i | 0]);
 }
 
 setTimeout(() => {
   starwarsintro.classList.add('star-wars-intro-gone')
-}, 1000)
+}, 20000)
 
 // FUNCTIONS
 // PUT DATANUMBER IN ARRAY, CHECK IF SAME NUMBER
@@ -83,6 +85,7 @@ function stopAudio(target) {
 
 cardsArray.forEach((card) => {
   card.addEventListener('click', (event) => {
+    clickCount();
     card.classList.toggle('flipped-card');
 
     console.log(event.target.dataset.number);
@@ -94,16 +97,16 @@ cardsArray.forEach((card) => {
     noClick();
 
     // WHEN YOU'VE COMPLETED GAME
-    if (correct === 8) {
+    if (correct === (cardsArray.length)/2) {
       gameboard.classList.add('pointer-stop');
       stopAudio(cantina);
       playAudio(ending);
       clearInterval(id);
+      success.innerHTML = `<h2>YOU'VE BROUGHT PEACE</br>TO THE GALAXY!</br>AND IN ONLY ${clicks} CLICKS!</br></br>PRESS ME TO PLAY AGAIN!</h2>`
       setTimeout(function() {
         success.classList.add('show');
       }, 1000)
     };
-   clickCount();
    if (counter < 0) {
      card.removeEventListener('click', function(){});
    }
@@ -119,7 +122,7 @@ cardsArray.forEach((card) => {
     clicks = 0;
     document.querySelector(".clicks").innerHTML = `Number of clicks: 0`;
     clearInterval(id);
-    counter = 10;
+    counter = 45;
     newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
     start.classList.remove('remove');
     start.classList.add('show');
@@ -160,12 +163,12 @@ cardsArray.forEach((card) => {
     clicks = 0;
     document.querySelector(".clicks").innerHTML = `Number of clicks: 0`;
     clearInterval(id);
-    counter = 10;
+    counter = 45;
     newElement.innerHTML = "You've got " + counter.toString() + " seconds to go!";
     setTimeout(() => {
       start.classList.remove('remove');
       start.classList.add('show');
-    }, 3000)
+    }, 1000)
 
     // RESHUFFEL BOARD
     setTimeout(() => {
