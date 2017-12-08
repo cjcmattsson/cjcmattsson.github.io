@@ -142,7 +142,7 @@ cardsArray.forEach((card) => {
     complete = [];
     checkNumber = [];
     correct = 0;
-    counter = 10;
+    counter = 45;
 
     setTimeout(() => {
       for (var i = gameboard.children.length; i >= 0; i--) {
@@ -183,7 +183,7 @@ cardsArray.forEach((card) => {
     complete = [];
     checkNumber = [];
     correct = 0;
-    counter = 10;
+    counter = 45;
 
     setTimeout(() => {
       for (var i = gameboard.children.length; i >= 0; i--) {
