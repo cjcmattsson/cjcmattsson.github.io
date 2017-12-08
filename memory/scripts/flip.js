@@ -22,7 +22,7 @@ for (var i = gameboard.children.length; i >= 0; i--) {
 
 setTimeout(() => {
   starwarsintro.classList.add('star-wars-intro-gone')
-}, 20000)
+}, 30000)
 
 // FUNCTIONS
 // PUT DATANUMBER IN ARRAY, CHECK IF SAME NUMBER
