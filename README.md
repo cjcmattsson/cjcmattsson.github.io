@@ -1,17 +1,13 @@
-# cjcmattsson.github.io
-
 # FUZZY MEMORY Project
 ## Part of Javascript-course
 <img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
-> Greedo: Jabba's through with you! He has no use for smugglers who drop their shipments at the first sign of an Imperial cruiser.
-Han Solo: Even I get boarded sometimes. Do you think I had a choice?
-Greedo: You can tell that to Jabba. At best, he may only take your ship.  
-Han Solo: Over my dead body!  
-Greedo: That's the idea... I've been looking forward to this for a long time.  
-Han Solo: Yeah, I'll bet you have.  
-[Han blasts Greedo, then heads out, tossing the bartender a coin]  
-Han Solo: Sorry about the mess.  
+> Vader: If only you knew the power of the Dark Side. Obi-Wan never told you what happened to your father.
+Luke: He told me enough! He told me you killed him!
+Vader: No. I am your father.
+Luke: [shocked] No. No! That's not true! That's impossible!
+Vader: Search your feelings; you know it to be true!
+Luke: NOOOOOOO! NOOOOOOOO!!! 
 
 ## Assignment:
 - Create a simple News Feed containing 10 made up news articles
