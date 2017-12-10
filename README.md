@@ -3,7 +3,7 @@
 
 <img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
-> Vader: If only you knew the power of the Dark Side. Obi-Wan never told you what happened to your father. <br />
+> Vader: Obi-Wan never told you what happened to your father. <br />
 Luke: He told me enough! He told me you killed him! <br />
 Vader: No. I am your father. <br />
 Luke: [shocked] No. No! That's not true! That's impossible! <br />
@@ -24,6 +24,7 @@ The theme of the game should need no introduction
 
 ## To view project on your computer
 - Clone/download repository from GitHub
+- Open the directory you just cloned
 - Open directory called "memory"
 - Open index.html file in your browser of choice
 
@@ -34,7 +35,7 @@ If you don't want do download entire repository, visit following link:
 
 
 ## The rules of the game
-- Put your volume on a REASONABLE level
+- Put your volume on a REASONABLE level. Not to low, but maybe not to high either..
 - Read the very important text that tells whats at stake when the page is loaded
 - Find the 8 pairs before the time runs out! You'll have 45 seconds to do this
 - Bonus: Try to do this in as few clicks as possible!
