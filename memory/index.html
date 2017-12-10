@@ -11,46 +11,43 @@
 </head>
 <body>
 
-
+<!-- All content goes in here -->
   <div class="wrapper">
-    <div class="star-wars-intro">
 
+<!-- The StarWarsIntro-section -->
+    <div class="star-wars-intro">
     <!-- Blue Intro Text -->
     <p class="intro-text">
       Not so long ago in a<br>
       place pretty close by...
     </p>
-
-    <!-- Logo Image or Text goes in here -->
+    <!-- Logo Image -->
     <h2 class="main-logo">
       <img src="images/starwarslogo.png">
     </h2>
-
     <!-- All Scrolling Content Goes in here -->
     <div class="main-content">
-
       <div class="title-content">
         <p class="content-header">MEMORY STRIKES BACK <br> The Jedi Cards</p>
-
         <br>
-
         <p class="content-body">
           The galaxy needs your help! In an attempt to bring destruction upon the Republic, evil Gungans
           from the planet Naboo, led by their truly terrible leader Jar Jar Binks, has disrupted the order of
           the aincent Jedi cards!
           <br><br>
           Assist the Republic and the Jedi Order by finding the matching pairs before the time runs out! Help us brave player, you're our only hope!
-
         </p>
-
       </div>
     </div>
   </div>
 
+
+<!-- Buttons that starts, and resets the game -->
     <button class="restart time-is-up" type="button" name="button"><h2>I FIND YOUR<br>LACK OF SKILLS<br>DISTURBING</h2><br><h2>Press me for<br>another try</h2> </button>
     <button class="start" type="button" name="button"><h1>START<br>GAME</h1></button>
     <button class="success" type="button"></button>
 
+<!-- Gameboard that contains all cards -->
   <div class="gameboard">
       <div class="card" data-number="1"> <img src="images/vader.png" alt=""> </div>
       <div class="card" data-number="1"> <img src="images/vader.png" alt=""> </div>
@@ -70,21 +67,23 @@
       <div class="card" data-number="8"> <img src="images/emperor.png" alt=""> </div>
   </div>
 
+<!-- Timer and click-counter -->
   <div class="buttons-and-timer">
     <div class="count-down"></div>
     <p class="clicks">Number of clicks: 0</p>
   </div>
 
-
+<!-- Audio tracks that playes during different parts of game -->
   <audio class="intro" src="music/intro.mp3"></audio>
   <audio class="imperial" src="music/imperial.mp3"></audio>
   <audio class="cantina" src="music/cantina.mp3"></audio>
   <audio class="ending" src="music/ending.mp3"></audio>
 </div>
 
-  <script type="text/javascript" src="scripts/click.js"></script>
-  <script type="text/javascript" src="scripts/counter.js"></script>
-  <script type="text/javascript" src="scripts/flip.js"></script>
+<!-- All scripts -->
+  <script type="text/javascript" src="scripts/variables.js"></script>
+  <script type="text/javascript" src="scripts/functions.js"></script>
+  <script type="text/javascript" src="scripts/events.js"></script>
 
 </body>
 </html>
