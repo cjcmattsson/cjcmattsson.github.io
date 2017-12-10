@@ -13,6 +13,7 @@ setTimeout(() => {
   starwarsintro.classList.add('star-wars-intro-gone')
 }, 32000)
 
+// 32000
 
 
 // Event for when user clicks to see if the 2 clicked cards matches or not

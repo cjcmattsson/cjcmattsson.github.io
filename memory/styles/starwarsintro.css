@@ -29,6 +29,7 @@ Version: 1.0
 }
 
 .star-wars-intro p.intro-text {
+  pointer-events: none;
   position: relative;
   max-width: 16em;
   font-size: 200%;
@@ -45,7 +46,12 @@ Version: 1.0
   animation: intro 2s ease-out;
 }
 
+.intro-text {
+  pointer-events: none;
+}
+
 .star-wars-intro .main-content{
+  pointer-events: none;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -107,6 +113,7 @@ Version: 1.0
 /* Main Image Styles */
 
 .star-wars-intro .main-logo {
+  pointer-events: none;
   position: absolute;
   width: 2.6em;
   left: 50%;
