@@ -1,5 +1,6 @@
-# FUZZY MEMORY Project
-## Part of Javascript-course
+# Fuzzy Memory Project
+## Part of a course in Javascript @ YRGO Göteborg
+
 <img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
 > Vader: If only you knew the power of the Dark Side. Obi-Wan never told you what happened to your father. <br />
