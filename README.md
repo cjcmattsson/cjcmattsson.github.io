@@ -41,12 +41,14 @@ If you don't want do download entire repository, visit following link:
 - Bonus: Try to do this in as few clicks as possible!
 - Tell your friends about your new favourite game
 
-### Author:
-- Christopher Mattsson
-
 ### Written in:
 - HTML
 - CSS
 - Javascript
 
+### Author:
+- Christopher Mattsson
+
 ### Tested by:
+- Gabriel Aanesen
+- Sebastian Palm
