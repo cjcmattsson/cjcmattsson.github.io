@@ -2,7 +2,7 @@
 
 # FUZZY MEMORY Project
 ## Part of Javascript-course
-<img src="https://gph.is/1EmLBoO" alt="Star Wars is cool" width="100%">
+<img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
 > Greedo: Jabba's through with you! He has no use for smugglers who drop their shipments at the first sign of an Imperial cruiser.
 Han Solo: Even I get boarded sometimes. Do you think I had a choice?
