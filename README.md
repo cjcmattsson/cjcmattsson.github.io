@@ -1,5 +1,6 @@
 # Fuzzy Memory Project
 ## Part of a course in Javascript @ YRGO Göteborg
+### Note: Game contains music, set volume to reasonable level
 
 <img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
