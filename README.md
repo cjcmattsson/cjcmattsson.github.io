@@ -10,34 +10,26 @@ Vader: Search your feelings; you know it to be true! <br />
 Luke: NOOOOOOO! NOOOOOOOO!!!
 
 ## Assignment:
-- Create a simple News Feed containing 10 made up news articles
-- Create 5 different authors - each contributes with 2 articles
-- Project may only be written in PHP, HTML, CSS and/or Javascript
-- Syntax should include multiple data types, variables, functions, concatenation, arrays,
-loops, output (echo, print etc.)
-- Other criteria also need to be met. Talk to VinKla for information about these.
-- Have fun
+- Create a memory game with 8-10 pairs
+- The cards should be positioned randomly before a new game start
+- The game must include a restart button that reorder the cards randomly, using Javascript and not through a page reload
+- The game should be programmed in HTML, CSS and Javascript, no libraries or other languages
+- Have fun!
 
 
 ## My project
-My project has been influenced by 2 different "institutions"
-- The New York Times
-- Star Wars
-
-### Attention
-The text presented by the different authors are jibberish, its not like I know
-any language from the Star Wars universe
+The theme of the game should need no introduction
 
 
 ## To view project on your computer
 - Clone/download repository from GitHub
-- Download/open MAMP
-- Go to Preferences in MAMP and set Web Server (root directory) to the folder you just downloaded
-- Press "Start Servers" in MAMP
-- Open the index.php-file by typing localhost:8888 in your browser of choice
-- Enjoy responsibly
+- Open directory called "memory"
+- Open index.html file in your browser of choice
 
-#### Be aware - My project is designed on a 13 inch screen. Use at your on risk if operating on a larger screen. At least if you love banners. They will not appear very nice on your big precious screen.
+If you don't want do download entire repository, visit following link:
+- https://cjcmattsson.github.io/memory
+
+- Enjoy responsibly
 
 ### Author:
 - Christopher Mattsson
