@@ -8,15 +8,14 @@ window.addEventListener('load', () => {
   }, 2100)
 })
 
-// Timeout to make the intro takes fade out after a certain amount of time
+// Timeout to make the intro fade out after a certain amount of time
 setTimeout(() => {
   starwarsintro.classList.add('star-wars-intro-gone')
 }, 32000)
 
-// 32000
 
 
-// Event for when user clicks to se if the 2 clicked cards matches or not
+// Event for when user clicks to see if the 2 clicked cards matches or not
 cardsArray.forEach((card) => {
   card.addEventListener('click', (event) => {
     clickCount();
@@ -68,8 +67,6 @@ start.addEventListener('click', () => {
       //This sections events triggers when the time is up, e.g when counter reaches below 0
       if (counter < 0) {
         clickCounter.push(clicks);
-        // console.log(clickCounter);
-        // console.log(clicks);
 
         stopAudio(cantina);
         gameboard.classList.add('pointer-stop');
