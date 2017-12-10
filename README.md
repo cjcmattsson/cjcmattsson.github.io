@@ -2,12 +2,12 @@
 ## Part of Javascript-course
 <img src="https://media.giphy.com/media/12IVCL4sQBEngQ/giphy.gif" alt="Star Wars is cool" width="100%">
 
-> Vader: If only you knew the power of the Dark Side. Obi-Wan never told you what happened to your father.
-Luke: He told me enough! He told me you killed him!
-Vader: No. I am your father.
-Luke: [shocked] No. No! That's not true! That's impossible!
-Vader: Search your feelings; you know it to be true!
-Luke: NOOOOOOO! NOOOOOOOO!!! 
+> Vader: If only you knew the power of the Dark Side. Obi-Wan never told you what happened to your father. <br />
+Luke: He told me enough! He told me you killed him! <br />
+Vader: No. I am your father. <br />
+Luke: [shocked] No. No! That's not true! That's impossible! <br />
+Vader: Search your feelings; you know it to be true! <br />
+Luke: NOOOOOOO! NOOOOOOOO!!!
 
 ## Assignment:
 - Create a simple News Feed containing 10 made up news articles
