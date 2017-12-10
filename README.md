@@ -31,16 +31,20 @@ If you don't want do download entire repository, visit following link:
 
 - Enjoy responsibly
 
+
+## The rules of the game
+- Put your volume on a REASONABLE level
+- Read the very important text that tells whats at stake when the page is loaded
+- Find the 8 pairs before the time runs out! You'll have 45 seconds to do this
+- Bonus: Try to do this in as few clicks as possible!
+- Tell your friends about your new favourite game
+
 ### Author:
 - Christopher Mattsson
 
 ### Written in:
 - HTML
 - CSS
-- PHP
 - Javascript
 
 ### Tested by:
-- Sebastian Palm
-- Andreas Lundqvist
-- Albert Norberg
