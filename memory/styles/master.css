@@ -24,7 +24,7 @@ button {
 }
 
 body {
-  background-image: url("../tatooine.jpg");
+  background-image: url("../images/tatooine.jpg");
   background-size: cover;
 }
 
@@ -58,7 +58,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../jediLogo.jpg");
+  background-image: url("../images/jediLogo.jpg");
   background-size: contain;
   height: 130px;
   width: 130px;
