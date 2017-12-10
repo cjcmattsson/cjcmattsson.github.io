@@ -35,7 +35,7 @@ If you don't want do download entire repository, visit following link:
 
 
 ## The rules of the game
-- Put your volume on a REASONABLE level. Not to low, but maybe not to high either..
+- Put your volume on a REASONABLE level. Not to low, but maybe not to high either.. (If you REALLY hate music, turn your volume off)
 - Read the very important text that tells whats at stake when the page is loaded
 - Find the 8 pairs before the time runs out! You'll have 45 seconds to do this
 - Bonus: Try to do this in as few clicks as possible!
