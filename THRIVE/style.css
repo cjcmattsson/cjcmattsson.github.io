@@ -1,0 +1,1162 @@
+/* ----FONTS----*/
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700,900');
+
+/* ----FONTS----
+Red: #EF7474
+Orange: #FFAE2A
+Blue: #3498DB
+darkBlue: #2c3e50
+
+Black 1: #1C1C1C
+Black 2: #0A0E0F
+Grey: #323232
+White: GhostWhite
+Green: #48936B
+yellow: #E9D06F
+*/
+
+
+/*----- GENERAL -----*/
+
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+section {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #E9D06F;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3vh;
+  color: GhostWhite;
+  text-align: center;
+}
+
+strong {
+  color: #E9D06F;
+}
+
+.divider {
+  color: #323232;
+  background-color: #323232;
+  height: 3px;
+  width: 20%;
+  margin-top: 2px;
+}
+
+.shadow {
+  -webkit-box-shadow: 5px 7px 9px -5px rgba(0, 0, 0, 0.93);
+  -moz-box-shadow: 5px 7px 9px -5px rgba(0, 0, 0, 0.93);
+  box-shadow: 5px 7px 9px -5px rgba(0, 0, 0, 0.93);
+}
+
+.wrapper {
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.paralax-group {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.squareInfo {
+  height: auto;
+}
+
+
+/*----- TEXT -----*/
+
+h1, h2, h4 {
+  font-family: 'Rubik', sans-serif;
+  max-width: 80vw;
+  text-align: center;
+  color: GhostWhite;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lp-headline {
+  font-size: 7.5vh;
+  transition: 0.5s ease-in;
+  opacity: 1;
+  z-index: 5;
+  font-family: 'Permanent Marker', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.sektHeading {
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: 'Permanent Marker', sans-serif;
+  text-shadow: 0px 2px 8px rgba(71, 71, 71, 0.61);
+}
+
+.textBackStart {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s ease-in;
+}
+
+.thriveStart {
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  left: 20px;
+  height: 50px;
+  width: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 0;
+}
+
+.blue {
+  color: #4E92DF!important;
+}
+
+.green {
+  color: #48936B!important;
+}
+
+.red {
+  color: #EF7474!important;
+}
+
+.white {
+  color: white;
+}
+
+.darkBlue {
+  color: #2c3e50!important;
+}
+/*
+.col-md-12.svar .green {
+  color: #48936B;
+}*/
+
+
+/*--- STARTSIDOR FRONT/BACK SECTION ----*/
+
+.back {
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(images/sewing-machine.jpg);
+  transition: 0.1s ease;
+}
+
+.front {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0A0E0F;
+  background-image: linear-gradient( #0A0E0F, #1C1C1C);
+  padding: 10% 5%;
+  position: relative;
+  height: 100vh;
+}
+
+.front-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 75%;
+  text-align: justify;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/*HAMBURGER MENU*/
+
+button.hamburger {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+  top: 15px;
+  right: 15px;
+}
+
+.hamburger-inner {
+  color: #fff;
+}
+
+.hamburger-box {
+  color: #fff;
+}
+
+.is-active .hamburger-inner, .is-active .hamburger-inner::before, .is-active .hamburger-inner::after {
+  background-color: #fff;
+  transition: 300ms ease-in;
+}
+
+.largeMenu, .largeMenu li {
+  display: none;
+}
+
+.hamburger:focus {
+  outline: 0;
+}
+
+
+/*SMALL MENU*/
+
+.menuFromBurger {
+  padding-top: 10%;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  background-color: #1C1C1C;
+  transition: all 0.75s ease-in;
+  z-index: 1;
+}
+
+.menuShowOnClick {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  overflow-x: hidden;
+  background-color: #1C1C1C;
+}
+
+.smallHiddenMenu {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 5%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 25px;
+  background-color: #1C1C1C;
+  transition: all 0.75s ease-in;
+}
+
+.smallHiddenMenu li {
+  margin-bottom: 2%;
+  color: GhostWhite;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.smallHiddenMenu li:hover {
+  transform: scale(1.2);
+}
+
+
+/*--- BUBBLE ----*/
+
+.col-md-6.chat {
+  display: flex;
+  height: 45%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4% 15% 4% 0;
+}
+
+.col-md-12.svar {
+  padding: 12px 25px 12px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  height: auto;
+  z-index: 10;
+}
+
+.col-md-12.svar p {
+  padding: 12px 0 12px 0;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+.bubble {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 110px;
+  width: 340px;
+  padding: 3%;
+  background: #FFFFFF;
+  border-radius: 40px;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 25px 45px 0px 0px;
+  border-color: transparent #FFFFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -3px;
+  top: calc(100% - 25px);
+}
+
+.talk {
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 20px;
+}
+
+.talk.blue {
+  color: #3498DB;
+}
+
+/*.talk.green {
+  color: #48936B;
+}*/
+
+
+/*BILDER/BRYGGOR MELLAN SECTIONS*/
+
+.sectionBridge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 100%;
+  margin: 0;
+  padding: 0!important;
+}
+
+.sectionBridge h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 5;
+  font-weight: bold;
+}
+
+.sectionBridge img {
+  display: inline;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10;
+  right: 10;
+}
+
+
+/*--- VEGAN SECTION ----*/
+
+.vegStart {
+  background-image: url('images/cow2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+.vegan {
+  background-color: #EB686A;
+  background-image: url('textRektangel.svg');
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.fiftyAnimals {
+  display: flex;
+  flex-flow: column;
+}
+
+.vegDjur {
+  margin-top: 0%;
+  padding-right: 0%;
+}
+
+.djurInfo, .djurInfo p {
+  text-align: center;
+}
+
+.squareAnimals {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5%;
+  margin-bottom: 12%;
+  margin-top: 0;
+  height: 280px;
+  width: 100%;
+}
+
+.djur {
+  height: 50%;
+  width: 50%;
+}
+
+.mink {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 0 5% 5% 5%;
+  background-color: #f7f7f7;
+}
+
+.svenskaMinkar {
+  text-align: center;
+}
+
+.storSiffra-and-text.svenskaMinkar {
+  margin-bottom: 2%;
+}
+
+.minkText {
+  color: #EB686A!important;
+  line-height: 100%;
+  text-align: right!important;
+}
+
+.minkImg1 {
+  height: 160px;
+  width: 50%;
+}
+
+
+/*--- FAIRTRADE SECTION ----*/
+
+.fairStart {
+  background-image: url('images/girl.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+.fairtrade {
+  background-color: #3498DB;
+  background-image: url('textRektangel.svg');
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.procent {
+  font-size: 100px;
+}
+
+.barnInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 255px;
+  background-color: #3498DB;
+}
+
+.barn {
+  height: auto;
+  background-color: #3498DB;
+  background-image: url('textRektangel.svg');
+}
+
+
+.storSiffra-and-text {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  margin-bottom: 10%;
+}
+
+.barnArbetare {
+  text-align: center;
+}
+
+.barnArbetare p {
+  text-align: center;
+}
+
+.small {
+  display: inline;
+  font-size: 3vh;
+}
+
+.bangladesh {
+  margin-top: 5%;
+  display: inline-block;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.bangladesh p {
+  text-align: center;
+}
+
+.storSiffra {
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  font-size: 144px;
+  font-weight: bold;
+  height: 144px;
+}
+
+.barn2 {
+  padding-top: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #3498DB;
+  background-image: url('textRektangel.svg');
+}
+
+.gubbar {
+  max-height: 200px;
+  max-width: 300px;
+  margin-bottom: 20%;
+}
+
+.barnBrygga {
+  height: 70px;
+  background-color: #3498DB;
+}
+
+.barnMoney {
+  margin-bottom: 0;
+  margin-top: 10%;
+  height: 144px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: white!important;
+  text-align: left!important;
+}
+
+.shareMoney {
+  background-color: #f7f7f7;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.barnDiagram {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.barnGubbar {
+  height: auto;
+}
+
+.stapelLarge {
+  display: none;
+}
+
+.stapelSmall {
+  margin-top: 10%;
+  height: 350px;
+  width: 260px;
+}
+
+.stapelText {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+
+/*--- ECO SECTION ----*/
+
+.ekoStart {
+  background-image: url('images/cotton.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+.eko {
+  height: auto;
+  background-color: #48936B;
+  background-image: url('textRektangel.svg');
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.threeSixFive {
+  text-align: center;
+}
+
+.barrel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.tunnan {
+  height: 255px;
+  width: 155px;
+}
+
+.shirtIncr {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: #f7f7f7!important;
+}
+
+.shirtIncCirc {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.shirtIncCirc2 {
+  display: none;
+}
+
+.plaggUp {
+  margin-top: 5%;
+}
+
+.plaggDown {
+  margin-bottom: 5%;
+}
+
+
+/*--- CALL OT ACTION TRÖJOR SECTION ---*/
+
+.summaryStart {
+  background-image: url('images/lite1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+.summary {
+  height: auto;
+  background-color: #2c3e50;
+  background-image: url('textRektangel.svg');
+  width: 100%;
+}
+
+.logoSummaryBot {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSummaryBot img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 3%;
+}
+
+.tisshorSummary {
+  display: flex;
+  justify-content: center;
+}
+
+.tisshor {
+  width: 85%;
+  display: flex;
+  flex-flow: row!important;
+  justify-content: space-around;
+}
+
+.priceTag {
+  width: 80%;
+}
+
+.priceTag img {
+  width: 85%;
+  height: 85%;
+}
+
+.logorTish {
+  margin-top: 5%;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.djurLogosSum {
+  height: 34%;
+  width: 58%;
+  margin: 3%;
+}
+
+
+/*--- Call To Action DELA PAGE ---*/
+
+.ctaStart {
+  background-image: url('images/megaphone.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+}
+
+.cta {
+  height: auto;
+  background-color: #583C61;
+  background-image: url('textRektangel.svg');
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 5%;
+  margin: 5% 0 5% 0;
+}
+
+.shareButtonBig, .shareButtonSmall button {
+  background-color: #fff;
+  color: #583C61;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.shareButtonBig:hover, .shareButtonSmall button:hover {
+  background-color: #e1dbe2;
+  -webkit-box-shadow: 3px 5px 7px -5px rgba(0, 0, 0, 0.93);
+  -moz-box-shadow: 3px 5px 7px -5px rgba(0, 0, 0, 0.93);
+  box-shadow: 3px 5px 7px -5px rgba(0, 0, 0, 0.93);
+}
+
+.shareButtonBig:focus, .shareButtonSmall button:focus {
+  outline: 0;
+}
+
+.shareButtonBig {
+  font-size: 40px;
+  width: 310px;
+  height: 80px;
+  margin-top: 5%;
+  border-radius: 30px;
+}
+
+.shareButtonSmall button {
+  font-size: 20px;
+  width: 120px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.shareButtonSmall {
+  margin-top: 15%;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.mailText {
+  font-family: 'Rubik', sans-serif;
+  font-size: 22px;
+  text-align: left;
+}
+
+.mailadress {
+  border-bottom: 1px solid #fff;
+  text-align: left;
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-size: 22px;
+}
+
+
+/*--- PAGE BOTTOM SECTION ----*/
+
+.page-bottom {
+  background-color: #1C1C1C;
+  font-family: 'Rubik', sans-serif;
+}
+
+.page-bottom p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.3vh;
+}
+
+.thrive-name {
+  letter-spacing: 0.3em;
+}
+
+.socialLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLogo img {
+  width: 30%;
+}
+
+.squarePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80%;
+  background-color: white;
+}
+
+.col-md-6 {
+  padding: 3%;
+}
+
+
+/*----- MEDIA QUARIES -----*/
+
+@media only screen and (max-width: 576px) {
+  .back {
+    background-image: url(images/sewing-machine_mobile.jpg);
+  }
+  #lp-headline {
+    font-size: 5.5vh;
+    max-width: 90%;
+  }
+  p {
+    font-size: 3vh;
+  }
+  .sektHeading {
+    font-size: 35px!important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .sektHeading {
+    font-size: 30px!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .djur {
+    height: 45%;
+    width: 38%;
+    margin: 3%;
+  }
+  .sektHeading {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .chat {
+    height: 80%;
+  }
+}
+
+
+/*Desktop-version*/
+
+@media only screen and (min-width: 767px) {
+  /*General*/
+  p {
+    font-size: 4vh;
+  }
+  .small {
+    font-size: 4vh;
+  }
+  .col-md-12.svar p {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 0 40px 0;
+  }
+  .talk {
+    font-size: 35px;
+  }
+  .bubble {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 10%;
+    height: 155px;
+    width: 522px;
+  }
+  .storSiffra-and-text {
+    margin-bottom: 0;
+  }
+  /*Menu*/
+  .menuShowOnClick {
+    width: 30%;
+  }
+  /*Veganskt*/
+  .djurInfo, .djurInfo p {
+    text-align: right;
+  }
+  .minkImg1 {
+    transform: scaleX(-1);
+  }
+  .col-md-12.mink {
+    padding: 2% 15% 2% 15%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  .col-md-8.squareAnimals {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    height: 320px;
+    width: 100%;
+  }
+  .fiftyAnimals {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  .djur {
+    height: 80%;
+    width: 25%;
+  }
+  .vegDjur {
+    margin-top: 0;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+  }
+  /*Rättvisemärkt*/
+  .bangladesh {
+    text-align: left;
+    padding-left: 5%;
+  }
+  .stapelText {
+    margin-top: 3%;
+    margin-bottom: 0%;
+  }
+  .barnArbetare {
+    text-align: left;
+    padding-bottom: 3%;
+  }
+  .barnArbetare p {
+    text-align: left;
+  }
+  .stapelSmall {
+    display: none;
+  }
+  .stapelLarge {
+    margin-left: 3%;
+    margin-top: 5%;
+    display: block;
+    height: 270px;
+    width: auto;
+  }
+  .barnDiagram {
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    height: auto;
+    padding: 2% 5% 5% 5%;
+  }
+  .gubbar {
+    margin-bottom: 0;
+  }
+  .barn2 {
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    flex-flow: row;
+  }
+  /*Ekologiskt*/
+  .pest {
+    display: flex;
+    flex-flow: row;
+  }
+  .barrel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+    margin-top: 5%;
+    margin-right: 10%;
+  }
+  .textTillTunnan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tunnan {
+    height: 330px;
+    width: 190px;
+  }
+  .shirtsRightText {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+  .shirtIncr {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: white;
+  }
+  .shirtIncCirc {
+    display: none
+  }
+  .shirtIncCirc2 {
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    width: 400px;
+    height: 400px;
+  }
+  .plaggUp, .plaggDown {
+    margin-top: 0;
+    font-size: 3.5vh;
+  }
+  /*Tröjor*/
+  .djurLogosSum {
+    height: 87%;
+    width: 20%;
+    margin: 1%;
+  }
+  .priceTag {
+    width: 70%;
+  }
+  .tisshor {
+    margin-top: 2%;
+    width: 40%;
+    display: flex;
+    flex-flow: column!important;
+  }
+  .logorTish {
+    width: 75%;
+    display: flex;
+    flex-flow: row;
+  }
+  /*Dela*/
+  .shareButtonSmall {
+    margin-top: 8%;
+  }
+  /*Bottom*/
+  .logoSummaryBot img {
+    width: 300px;
+    height: 300px;
+  }
+  .logoSummaryBot p {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #lp-headline {
+    font-size: 10vh;
+  }
+  p {
+    font-size: 4vh;
+    color: white;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .front-content {
+    width: 100%;
+  }
+  .sektHeading {
+    font-size: 65px;
+  }
+}
+
+/*End of code*/
