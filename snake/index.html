@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <title>Snake Game</title>
     <style media="screen">
-    * {box-sizing: border-box;}
-    body {
+
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+    html {
       margin: 0;
-      width: 100vw;
+      padding: 0;
+    }
+    body {
+      font-family: 'Indie Flower', cursive;
+      font-weight: 1000;
+      margin: 0;
       height: auto;
       display: flex;
       align-items: center;
@@ -17,11 +24,21 @@
       #canvas {
         border: 1px solid black;
       }
+
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+      }
     </style>
   </head>
   <body>
-  <h1>Ultimate Snake</h1>
-  <canvas id="canvas" width="608" height="608"></canvas>
+
+  <canvas id="canvas" width="608" height="608">
+  </canvas>
+  <h1 class="header">Ultimate Snake - Glhf</h1>
   <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

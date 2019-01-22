@@ -1,4 +1,5 @@
 const cvs = document.getElementById('canvas');
+const header = document.querySelector('.header');
 const ctx = cvs.getContext('2d');
 
 // Game board unit
@@ -117,6 +118,7 @@ draw = () => {
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
       dead.play();
       clearInterval(game);
+      header.innerHTML = "U got rekt"
 }
 
 snake.unshift(newHead);
